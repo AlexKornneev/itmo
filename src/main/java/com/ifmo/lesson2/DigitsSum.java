@@ -10,24 +10,18 @@ public class DigitsSum {
     public static void main(String[] args) {
         boolean success = false;
         do {
-            System.out.println("Введите число");
             Scanner scanner = new Scanner(System.in);
-
+            System.out.println("Введите число");
             int n = scanner.nextInt();
-
             int digitSum = digitSum(n);
 
             System.out.println(digitSum);
-            if (success) {
 
-            } else {
-
-                System.out.println("Отлично! Попробуйте еще");
-            }
-        } while (!success);
+            System.out.println("Отлично! Попробуйте еще");
+        } while (true);
     }
 
-    public static Integer digitSum(int n) {
+    private static Integer digitSum(int n) {
         // TODO implement
         String number = String.valueOf(n);
         int sum = 0;
@@ -39,6 +33,6 @@ public class DigitsSum {
     }
 
     private static int makeStringToInt(char item) {
-        return Integer.valueOf(String.valueOf(item));
+        return Integer.parseInt(String.valueOf(item));
     }
 }

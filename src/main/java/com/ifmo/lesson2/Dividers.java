@@ -9,20 +9,15 @@ public class Dividers {
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите натуральное число");
         int n = scanner.nextInt();
         // TODO implement
-        System.out.println("Введите натуральное число");
-        // проверка положительное число или нет
-        if (scanner.hasNextInt()) {
-            //Если проверка пройдена, перемменой а присваивается значение введенного числа
-            int a;
-            a = scanner.nextInt();
-            System.out.print("Делителями числа " + a + " являются ");
-            for (int i = a; i > 0; i--) {
-                int b = a % i;
-                if (b == 0)
-                    System.out.print(i + " ");
-            }
-        } else System.out.println("Ошибка. Введено не число");
+        System.out.print("Делителями числа " + n + " являются ");
+        for (int i = n; i > 0; i--) {
+            int b = n % i;
+            if (b == 0)
+                System.out.print(i + " ");
+        }
+//        } else System.out.println("Ошибка. Введено не число");
     }
 }
