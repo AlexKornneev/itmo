@@ -11,7 +11,7 @@ public class IsEven {
         System.out.println(isEven(n));
     }
 
-    private static String isEven(int n) {
+    public static String isEven(int n) {
         // TODO implement
         // Допустимые строки: "Четное" или "Нечетное"
         // если число делится на 2 без остатка, то оно четное, если с остатком то нечетное

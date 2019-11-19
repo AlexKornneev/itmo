@@ -15,7 +15,7 @@ public class Factorial {
 
     }
 
-    private static long factorial(int n) {
+    public static long factorial(int n) {
         // TODO implement
         int a;
         long b = 1;

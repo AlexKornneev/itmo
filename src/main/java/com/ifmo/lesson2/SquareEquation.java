@@ -21,7 +21,7 @@ public class SquareEquation {
     /*
     Возвращает массив из двух корней или null, если таковых нет.
      */
-    private static double[] squareEquationRoots(double a, double b, double c) {
+    public static double[] squareEquationRoots(double a, double b, double c) {
         double d = (b * b) - (4 * a * c);
         double e = 0;
         double f = 0;

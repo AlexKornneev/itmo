@@ -13,7 +13,7 @@ public class FloatRound {
         System.out.println(rounded);
     }
 
-    private static float round(float n) {
+    public static float round(float n) {
         // TODO implement
         return (int) (n + 0.5);
     }

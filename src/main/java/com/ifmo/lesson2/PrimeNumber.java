@@ -22,7 +22,7 @@ public class PrimeNumber {
         System.out.println(prime);
     }
 
-    private static boolean isPrime(int n) {
+    public static boolean isPrime(int n) {
         // TODO implement
         for (int i = (int) Math.sqrt(n); i >= 1; i--) {
             if (n % i == 2 & i != 1) {

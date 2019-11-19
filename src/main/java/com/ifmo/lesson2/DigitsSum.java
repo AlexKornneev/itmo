@@ -21,7 +21,7 @@ public class DigitsSum {
         } while (true);
     }
 
-    private static Integer digitSum(int n) {
+    public static Integer digitSum(int n) {
         // TODO implement
         String number = String.valueOf(n);
         int sum = 0;

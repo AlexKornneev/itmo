@@ -24,7 +24,8 @@ public class IntsOrdering {
         System.out.println(ordering);
     }
 
-    private static String ordering(int a, int b, int c) {
+    @SuppressWarnings("WeakerAccess")
+    public static String ordering(int a, int b, int c) {
         //TODO implement
         if(a<b&a<c){
             if(b<c)System.out.println("Возрастающая последовательность "+a+" "+b+" "+c);

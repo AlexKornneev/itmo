@@ -12,18 +12,18 @@ public class Count2 {
      */
     public static void main(String[] args) {
 
-        int Count2 = 0;
-        for(int i = 2;i <= 50000; i++){
-            String s = String.valueOf(i);
-            if(s.indexOf('2')== -1){
-                Count2++;
-            }
-        System.out.println(Count2);
+        System.out.println(count2());
     }
 
- //   public static int count2() {
-        // TODO implement
+    public static int count2() {
+        int count2 = 0;
+        for (int i = 2; i <= 50000; i++) {
+            String s = String.valueOf(i);
+            if (s.indexOf('2') == -1) {
+                count2++;
+            }
+        }
 
-//        return 0;
+        return count2;
     }
 }

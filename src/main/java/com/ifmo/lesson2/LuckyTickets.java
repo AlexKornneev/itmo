@@ -14,7 +14,7 @@ public class LuckyTickets {
         System.out.println(luckyTickets());
     }
 
-    private static int luckyTickets() {
+    public static int luckyTickets() {
         // TODO implement
         int a = 0;
         for (int i = 1001; i < 1000000; i++) {
