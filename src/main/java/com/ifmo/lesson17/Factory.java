@@ -12,7 +12,7 @@ public abstract class Factory {
             case ("Ger"):
                 return new GerFactory();
             case ("UK"):
-                return new UkFactory():
+                return new UkFactory();
         }
         throw new IllegalArgumentException("NO Factory");
     }

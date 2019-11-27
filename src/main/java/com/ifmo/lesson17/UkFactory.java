@@ -1,14 +1,8 @@
 package com.ifmo.lesson17;
 
-public class UkFactory implements Car {
+public class UkFactory extends Factory {
     @Override
-    public int power() {
-        return 0;
+    public Car createCar() {
+        return new Bentley();
     }
-
-    @Override
-    public int maxSpeed() {
-        return 0;
-    }
-
 }
