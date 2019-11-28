@@ -8,14 +8,31 @@ public class Fibonacci20 {
      */
     public static void main(String[] args) {
         int[] fibonacciNumbers = fibonacciNumbers();
-
         // TODO implement
+        fibNum(fibonacciNumbers);
     }
 
     public static int[] fibonacciNumbers() {
         // TODO implement
-
-        return new int[0];
+        int[] Mas = new int[20];
+        for (int i =0; i<Mas.length; i++){
+            if (i<2){
+                Mas[i] = 1;
+            }
+            else {
+                Mas[i] = Mas[i-2]+ Mas[i-1];
+            }
+        }
+        return Mas;
     }
-
+    private static void fibNum(int[] array){
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < array.length; i++) {
+            builder.append(array[i]);
+            if(i < array.length - 1){
+                builder.append(" ");
+            }
+        }
+        System.out.println(builder);
+    }
 }

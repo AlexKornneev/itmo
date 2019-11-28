@@ -10,12 +10,26 @@ public class EvenArray {
     public static void main(String[] args) {
         int[] evenArray = evenArray();
 
-        // TODO implement
     }
 
     public static int[] evenArray() {
-        // TODO implement
+        int a = 0;
+        for (int i = 2; i <= 20; i++) {
+            if (i % 2 == 0) a++;
+        }
+        int[] evenArray = new int[a];
+        for (int i = 2, b = 0; i <= 20; i++) {
+            if (i % 2 == 0) {
+                evenArray[b] = i;
+                System.out.print(evenArray[b] + " ");
+                b++;
+            }
+        }
 
-        return new int[0];
+        System.out.println(" ");
+        for (int i = 0; i < evenArray.length; i++) {
+            System.out.println(evenArray[i]);
+        }
+        return evenArray;
     }
 }
