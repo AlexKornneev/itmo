@@ -8,12 +8,10 @@ public class Fibonacci20 {
      */
     public static void main(String[] args) {
         int[] fibonacciNumbers = fibonacciNumbers();
-        // TODO implement
         fibNum(fibonacciNumbers);
     }
 
     public static int[] fibonacciNumbers() {
-        // TODO implement
         int[] Mas = new int[20];
         for (int i =0; i<Mas.length; i++){
             if (i<2){
