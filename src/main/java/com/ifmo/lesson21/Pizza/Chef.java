@@ -8,10 +8,10 @@ public class Chef implements Runnable {
             rest.notifyAll();
             while (rest.orderTaken == false)
                 rest.wait();
-            System.out.println("Приступили к готовке");
+            System.out.println("Кухня приступила к приготовлению заказа клиента");
             Thread.sleep(1000);
             rest.putFood(rest.getOrder());
-            System.out.println("Заказ приготовлен");
+            System.out.println("Кухня закончила работать с заказом клиента");
         }
     }
 

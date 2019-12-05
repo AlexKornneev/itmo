@@ -33,7 +33,7 @@ public class Restaurant {
         }
         clientOrder = false;
         notifyAll();
-        System.out.println("Принимаю заказ у клиента #" + orderId);
+        System.out.println("принимаю заказ у клиента Rest" + orderId);
         return orderId;
     }
 
@@ -48,7 +48,7 @@ public class Restaurant {
         clientOrder = true;
         this.orderId = l;
         notifyAll();
-        System.out.println("оформить заказ клиента #" + l);
+        System.out.println("оформление заказа клиента Rest" + l);
     }
 
     synchronized long getOrder() {
@@ -61,7 +61,7 @@ public class Restaurant {
         }
         orderTaken = false;
         notifyAll();
-        System.out.println("Заказ получен офицантом #" + orderId);
+        System.out.println("заказ получен офицантом Rest" + orderId);
         return orderId;
     }
 
@@ -76,7 +76,7 @@ public class Restaurant {
         orderTaken = true;
         this.orderId = l;
         notifyAll();
-        System.out.println("Заказ передан на кухню #" + l);
+        System.out.println("заказ передан на кухню Rest" + l);
     }
 
     synchronized long getFood() {
@@ -89,7 +89,7 @@ public class Restaurant {
         }
         orderReady = false;
         notifyAll();
-        System.out.println("Готовый заказ передан официанту #" + orderId);
+        System.out.println("готовый заказ передан официанту Rest" + orderId);
         return orderId;
     }
 
@@ -104,7 +104,7 @@ public class Restaurant {
         orderReady = true;
         this.orderId = n;
         notifyAll();
-        System.out.println("Официант забрал заказ с кухни #" + n);
+        System.out.println("официант забрал заказ с кухни Rest" + n);
     }
 
     synchronized long getOrderReceived() {
@@ -117,7 +117,7 @@ public class Restaurant {
         }
         orderReceived = false;
         notifyAll();
-        System.out.println("Заказ выдан клиенту #" + orderId);
+        System.out.println("заказ выдан клиенту Rest" + orderId);
         return orderId;
     }
 
@@ -132,7 +132,7 @@ public class Restaurant {
         orderReceived = true;
         this.orderId = l;
         notifyAll();
-        System.out.println("Заказ получен клиентом #" + l);
+        System.out.println("заказ получен клиентом Rest" + l);
     }
 
 }
