@@ -8,13 +8,38 @@ public class UnevenArray {
      */
     public static void main(String[] args) {
         int[] unevenArray = unevenArray();
+        pirintArray(unevenArray);
+        pirintArrayReverse(unevenArray);
+    }
 
-        // TODO implement
+    private static void pirintArrayReverse(int[] array) {
+        StringBuilder builder = new StringBuilder();
+        for (int i = array.length - 1; i >= 0; i--) {
+            builder.append(array[i]);
+            if (i > 0) {
+                builder.append(" ");
+            }
+        }
+        System.out.println(builder);
+    }
+
+    private static void pirintArray(int[] array) {
+
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < array.length; i++) {
+            builder.append(array[i]);
+            if (i < array.length - 1) {
+                builder.append(" ");
+            }
+        }
+        System.out.println(builder);
     }
 
     public static int[] unevenArray() {
-        // TODO implement
-
-        return new int[0];
+        int[] array = new int[50];
+        for (int i = 1, j = 0; i < 100; i += 2) {
+            array[j++] = i;
+        }
+        return array;
     }
 }
