@@ -27,16 +27,15 @@ public class SquareEquation {
         double f = 0;
         if (d == 0) {
             e = -1 * (b / (2 * a));
-            System.out.println("1 корень" + e);
+            return new double[]{e};
         } else {
             if (d > 0) {
                 e = ((-1 * b) + Math.sqrt(d)) / (2 * a);
                 f = ((-1 * b) - Math.sqrt(d)) / (2 * a);
-                System.out.println("2 корня" + f + e);
+                return new double[]{f, e};
             } else {
                 return null;
             }
         }
-        return new double[(int) d];
     }
 }
