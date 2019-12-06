@@ -27,12 +27,12 @@ public class SquareEquation {
         double f = 0;
         if (d == 0) {
             e = -1 * (b / (2 * a));
-            System.out.println("1 корень");
+            System.out.println("1 корень" + e);
         } else {
             if (d > 0) {
                 e = ((-1 * b) + Math.sqrt(d)) / (2 * a);
                 f = ((-1 * b) - Math.sqrt(d)) / (2 * a);
-                System.out.println("2 корня");
+                System.out.println("2 корня" + f + e);
             } else {
                 return null;
             }
