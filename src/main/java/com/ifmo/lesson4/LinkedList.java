@@ -1,7 +1,5 @@
 package com.ifmo.lesson4;
 
-import javax.xml.namespace.QName;
-
 /**
  * Односвязный список, где каждый предыдущий
  * элемент харнит ссылку на следующий. Список
@@ -17,22 +15,35 @@ public class LinkedList {
      * @param val Значение, которое будет добавлено.
      */
     public void add(Object val) {
-        // TODO implement
-        int i=0;
         if (head == null) {
             head = new Item(val);
-        } else {
-            Item item = head;
-            for (;;) {
-                if (item.next == null){
-                    item.next = new Item(val);
-                    return;
-                }
-                item = item.next;
-                i++;
 
+            return;
+        }
 
-            }
+        //noinspection ConstantConditions
+        find(-1).next = new Item(val);
+    }
+
+    private Item find(int i) {
+        if (head == null)
+            return null;
+
+        if (i == 0)
+            return head;
+
+        int cnt = 1;
+
+        for (Item prev = head;;) {
+            Item next = prev.next;
+
+            if (next == null)
+                return i < 0 ? prev : null;
+
+            if (cnt++ == i)
+                return next;
+
+            prev = next;
         }
     }
 
@@ -44,9 +55,9 @@ public class LinkedList {
      * или {@code null}, если не найдено.
      */
     public Object get(int i) {
-        // TODO implement
+        Item item = find(i);
 
-        return null;
+        return item == null ? null : item.value;
     }
 
     /**
@@ -57,7 +68,26 @@ public class LinkedList {
      * @return Удаленное значение или {@code null}, если не найдено.
      */
     public Object remove(int i) {
-        // TODO implement
+        if (head == null)
+            return null;
+
+        if (i == 0) {
+            Item h = head;
+
+            head = head.next;
+
+            return h.value;
+        }
+
+        Item prev = find(i - 1);
+        Item cur;
+
+        if (prev != null && (cur = prev.next) != null) {
+            prev.next = cur.next;
+
+            return cur.value;
+        }
+
         return null;
     }
 }
