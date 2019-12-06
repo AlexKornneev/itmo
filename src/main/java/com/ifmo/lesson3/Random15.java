@@ -8,7 +8,7 @@ public class Random15 {
      Подсчитайте сколько в массиве чётных элементов и выведете это количество на экран на
      отдельной строке.
      */
-    private static Random random = new Random();
+    public static Random random = new Random();
 
     public static void main(String[] args) {
         int[] randomNumbers = randomNumbers();
@@ -17,7 +17,7 @@ public class Random15 {
         System.out.println(evens);
     }
 
-    private static void printArray(int[] array) {
+    public static void printArray(int[] array) {
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < array.length; i++) {
             builder.append(array[i]);
@@ -36,7 +36,7 @@ public class Random15 {
         return array;
     }
 
-    private static int evens(int[] arr) {
+    public static int evens(int[] arr) {
         int evens = 0;
         for (int i = 0; i < arr.length; i++) {
             evens = ((arr[i] & 1) == 0) ? evens + 1 : evens;
