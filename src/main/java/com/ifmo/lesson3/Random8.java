@@ -27,9 +27,11 @@ public class Random8 {
     }
 
     public static int[] replaceWithZeros(int[] randomNumbers) {
-        for (int i = 1; i < randomNumbers.length; i++) {
-            randomNumbers[i] = 0;
-        }
+        // этим цыклом просматрваем значения элементов и если значение нечетное - заменяем его на 0
+            for(int i=0;i<randomNumbers.length;i++){
+                if(randomNumbers[i]%2!=0)randomNumbers[i]=0;
+            }
+
         return randomNumbers;
     }
 
