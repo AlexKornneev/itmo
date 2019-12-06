@@ -17,9 +17,9 @@ public class Count2 {
 
     public static int count2() {
         int count2 = 0;
-        for (int i = 2; i <= 50000; i++) {
+        for (int i = 2; i <= 50000; i+=1) {
             String s = String.valueOf(i);
-            if (s.indexOf('2') == -1) {
+            if (s.indexOf('2') != -1) {
                 count2++;
             }
         }
