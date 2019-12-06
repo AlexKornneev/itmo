@@ -47,13 +47,13 @@ public class WallClock {
         return b;
     }
 
-    public static String remainingHours(int rndSecond) {
-        switch (rndSecond) {
+    public static String remainingHours(int randomSecond) {
+        switch (randomSecond) {
             case 0 -> System.out.println("До конца рабочего дня осталось меньше часа");
-            case 1 -> System.out.println("До конца рабочего дня остался " + rndSecond + " час");
-            case 2, 3, 4 -> System.out.println("До конца рабочего дня осталось " + rndSecond + " часа");
-            default -> System.out.println("До конца рабочего дня осталось " + rndSecond + " часов");
+            case 1 -> System.out.println("До конца рабочего дня остался " + randomSecond + " час");
+            case 2, 3, 4 -> System.out.println("До конца рабочего дня осталось " + randomSecond + " часа");
+            default -> System.out.println("До конца рабочего дня осталось " + randomSecond + " часов");
         }
-        return "Осталось менее часа";
+        return String.valueOf(randomSecond);
     }
 }
