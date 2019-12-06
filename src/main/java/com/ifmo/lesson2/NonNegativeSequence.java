@@ -7,8 +7,8 @@ public class NonNegativeSequence {
      */
     public static void main(String[] args) {
         // TODO implement
-        for (int a = 90; a > 0; a -= 6){
-            System.out.println(a++);
+        for (int a = 90; a >= 0; a -= 5){
+            System.out.print(a);
         }
     }
 }
