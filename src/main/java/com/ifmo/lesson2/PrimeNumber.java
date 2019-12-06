@@ -13,7 +13,7 @@ public class PrimeNumber {
     1 не считается простым числом.
      */
     public static void main(String[] args) {
-        System.out.println("Введите натуральное число");
+      //  System.out.println("Введите натуральное число");
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
 
