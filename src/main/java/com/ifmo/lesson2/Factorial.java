@@ -20,6 +20,6 @@ public class Factorial {
             b *= i;
         }
         System.out.println("Факториал числа " + n + " равен " + b);
-        return n;
+        return b;
     }
 }
