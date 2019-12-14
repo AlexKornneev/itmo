@@ -3,7 +3,7 @@ package com.ifmo.kontrosha;
 import java.util.concurrent.CyclicBarrier;
 
 public class Barrier2 {
-    private static final CyclicBarrier Barrier = new CyclicBarrier(3, new executeTask());
+    private static final CyclicBarrier barrier = new CyclicBarrier(3, new ExecuteTask());
 
     public static void main(String[] args) throws InterruptedException {
         for (int i = 0; i < 3; i++) {
@@ -12,7 +12,7 @@ public class Barrier2 {
         }
     }
 
-    public static class executeTask implements Runnable {
+    public static class ExecuteTask implements Runnable {
         @Override
         public void run() {
             try {
@@ -35,7 +35,8 @@ public class Barrier2 {
         public void run() {
             try {
                 System.out.printf("Поток №%d прибыл к барьеру и ждет.\n", ThreadNumber);
-                Barrier.await();
+                barrier.await();
+               // Barrier.notifyAll();
                 System.out.printf("Поток №%d продолжил движение.\n", ThreadNumber);
             } catch (Exception ignored) {
             }
